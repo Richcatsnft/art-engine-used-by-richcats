@@ -30,18 +30,18 @@ Create your different layers as folders in the 'layers' directory, and add all t
 
 Once you have all your layers, go into `src/config.js` and update the `layerConfigurations` objects `layersOrder` array to be your layer folders name in order of the back layer to the front layer.
 
-_Example:_ If you were creating a portrait design, you might have a background, then a head, a mouth, eyes, eyewear, and then headwear, so your `layersOrder` would look something like this:
+_Example:_ If you were creating a portrait design, you might have a background, body, a mouth, eyes, hands, and then headwear, so your `layersOrder` would look something like this:
 
 ```js
 const layerConfigurations = [
   {
     growEditionSizeTo: 100,
     layersOrder: [
-      { name: "Head" },
-      { name: "Mouth" },
+      { name: "Background" },
+      { name: "Body" },
       { name: "Eyes" },
-      { name: "Eyeswear" },
-      { name: "Headwear" },
+      { name: "Hand" },
+      { name: "Head" },
     ],
   },
 ];
@@ -161,8 +161,7 @@ The program will output all the images in the `build/images` directory along wit
 {
   "dna": "d956cdf4e460508b5ff90c21974124f68d6edc34",
   "name": "#1",
-  "description": "This is the description of your NFT project",
-  "image": "https://hashlips/nft/1.png",
+  "description": "999 Generative Pixel Art - RICHCATS", 
   "edition": 1,
   "date": 1731990799975,
   "attributes": [
@@ -174,7 +173,7 @@ The program will output all the images in the `build/images` directory along wit
     { "trait_type": "Bottom lid", "value": "Low" },
     { "trait_type": "Top lid", "value": "Middle" }
   ],
-  "compiler": "HashLips Art Engine"
+  "compiler": "Art Engine"
 }
 ```
 
@@ -182,7 +181,7 @@ You can also add extra metadata to each metadata file by adding your extra items
 
 ```js
 const extraMetadata = {
-  creator: "Daniel Eugene Botha",
+  creator: "Questing Beast",
 };
 ```
 
@@ -241,5 +240,3 @@ Trait type: Iris
 { trait: 'Medium', chance: '20', occurrence: '15% out of 100%' }
 { trait: 'Small', chance: '60', occurrence: '70% out of 100%' }
 ```
-
-Hope you create some awesome artworks with this code 👄
